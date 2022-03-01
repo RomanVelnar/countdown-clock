@@ -1,7 +1,9 @@
 const countdown = () => {
-    const countDate = new Date('March 15, 2022 18:00:00').getTime
+    const countDate = new Date('March 15, 2022 18:00:00')
     const now = new Date().getTime()
     const gap = countDate - now
+
+    console.log(gap)
 
 // how time works
     const second = 1000
@@ -15,10 +17,11 @@ const countdown = () => {
     const textMinute = Math.floor((gap % hour) / minute)
     const textSecond = Math.floor((gap % minute) / second)
 
+// Display the time
     document.querySelector(".day").innerText = textDay
-    document.querySelector('.hour').innerText = textHour
-    document.querySelector('.minute').innerText = textMinute
-    document.querySelector('.second').innerText = textSecond
+    document.querySelector(".hour").innerText = textHour
+    document.querySelector(".minute").innerText = textMinute
+    document.querySelector(".second").innerText = textSecond
 };
 
 setInterval(countdown, 1000)
